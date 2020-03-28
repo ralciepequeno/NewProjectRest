@@ -7,19 +7,23 @@ namespace NewProjectRestPrj.Services.Implementation
 {
     public class PersonServiceImp : IPersonService
     {
+        //Contador responsavel por gerar um fake Id já que ainda não estamos acessando o banco
         private volatile int count;
 
+        //metodo responsavel por criar uma pessoa 
         public Person Create(Person person)
         {
             return person;
             //throw new NotImplementedException();
         }
 
+        //metodo responsavel por retornar uma pessoa
         public void Delete(long Id)
         {
             //throw new NotImplementedException();
         }
 
+        //metodo responsavel por retornar todas as pessoas
         public List<Person> FindAll()
         {
             List<Person> persons = new List<Person>();
@@ -31,7 +35,7 @@ namespace NewProjectRestPrj.Services.Implementation
             return persons;
         }
                
-        //Ira retornar uma nova instancia de pessoa
+        //metodo responsavel por retornar uma pessoa
         public Person FindById(long Id)
         {
             return new Person
@@ -44,6 +48,7 @@ namespace NewProjectRestPrj.Services.Implementation
             };            
         }
 
+        //metodo responsavel por atualizar os dados de uma pessoa
         public Person Update(Person person)
         {
             return person;
