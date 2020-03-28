@@ -8,7 +8,7 @@ namespace NewProjectRestPrj.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ValuesController : ControllerBase
+    public class PearsonController : ControllerBase
     {
         // GET api/values
         [HttpGet]
