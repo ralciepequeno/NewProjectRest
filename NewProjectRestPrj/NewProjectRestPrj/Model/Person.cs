@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace NewProjectRestPrj.Model
 {
-    public class Pearson
+    public class Person
     {
         public long Id { get; set; }
         public string FirstName { get; set; }
