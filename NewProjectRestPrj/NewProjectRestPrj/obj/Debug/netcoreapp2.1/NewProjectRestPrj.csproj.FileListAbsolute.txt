@@ -14,3 +14,5 @@ D:\Projetos\Loja\NewProjectRest\NewProjectRestPrj\NewProjectRestPrj\obj\Debug\ne
 D:\Projetos\Loja\NewProjectRest\NewProjectRestPrj\NewProjectRestPrj\obj\Debug\netcoreapp2.1\NewProjectRestPrj.RazorTargetAssemblyInfo.cache
 D:\Projetos\Loja\NewProjectRest\NewProjectRestPrj\NewProjectRestPrj\obj\Debug\netcoreapp2.1\NewProjectRestPrj.dll
 D:\Projetos\Loja\NewProjectRest\NewProjectRestPrj\NewProjectRestPrj\obj\Debug\netcoreapp2.1\NewProjectRestPrj.pdb
+D:\Projetos\Loja\NewProjectRest\NewProjectRestPrj\NewProjectRestPrj\obj\Debug\netcoreapp2.1\NewProjectRestPrj.genruntimeconfig.cache
+D:\Projetos\Loja\NewProjectRest\NewProjectRestPrj\NewProjectRestPrj\obj\Debug\netcoreapp2.1\NewProjectRestPrj.csproj.CoreCompileInputs.cache

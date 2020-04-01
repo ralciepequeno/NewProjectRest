@@ -22,6 +22,7 @@ namespace NewProjectRestPrj
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
+            //injeção de dependencia
             services.AddScoped<IPersonService, PersonServiceImp>();
         }
 
