@@ -2,13 +2,13 @@
 
 namespace NewProjectRestPrj.Model.Context
 {
-    public class MysqlContext : DbContext
+    public class MySQLContext : DbContext
     {
-        public MysqlContext() 
+        public MySQLContext() 
         {
 
         }
-        public MysqlContext(DbContextOptions<MysqlContext> options) : base (options) { }
+        public MySQLContext(DbContextOptions<MySQLContext> options) : base (options) { }
         public DbSet<Person> Pearson { get; set; }
     }
 }
