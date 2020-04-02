@@ -1,74 +1,85 @@
 ﻿using NewProjectRestPrj.Model;
+using NewProjectRestPrj.Model.Context;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading;
 
 namespace NewProjectRestPrj.Services.Implementation
 {
     public class PersonServiceImp : IPersonService
     {
-        //Contador responsavel por gerar um fake Id já que ainda não estamos acessando o banco
-        private volatile int count;
+        private MySQLContext _context;
+
+        public PersonServiceImp(MySQLContext context)
+        {
+            _context = context;
+        }
 
         //metodo responsavel por criar uma pessoa 
         public Person Create(Person person)
         {
+            try
+            {
+                _context.Add(person);
+                _context.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
             return person;
-            //throw new NotImplementedException();
         }
 
         //metodo responsavel por retornar uma pessoa
         public void Delete(long Id)
         {
-            //throw new NotImplementedException();
+            var result = _context.Person.SingleOrDefault(p => p.Id.Equals(Id));
+            try
+            {
+                if (result == null) _context.Person.Remove(result);
+                _context.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            //return person;
         }
 
         //metodo responsavel por retornar todas as pessoas
         public List<Person> FindAll()
         {
-            List<Person> persons = new List<Person>();
-            for (int i = 0; i < 8; i++)
-            {
-                Person person = MockPearson(i);
-                persons.Add(person);
-            }
-            return persons;
+            return _context.Person.ToList();
         }
                
         //metodo responsavel por retornar uma pessoa
         public Person FindById(long Id)
         {
-            return new Person
-            {
-                Id = IncrementAndGet(),
-                FirstName = "Name",
-                LastName = "Surname",
-                Addres = "My Addres",
-                Gender = "Male"
-            };            
+            return _context.Person.SingleOrDefault(p => p.Id.Equals(Id));
         }
 
         //metodo responsavel por atualizar os dados de uma pessoa
         public Person Update(Person person)
         {
+            if (!Exist(person.Id)) return new Person();
+
+            var result = _context.Person.SingleOrDefault(p => p.Id.Equals(person.Id));
+            try
+            {
+                _context.Entry(result).CurrentValues.SetValues(person);
+                _context.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
             return person;
         }
 
-        private Person MockPearson(int i)
+        private bool Exist(long? id)
         {
-            return new Person
-            {
-                Id = IncrementAndGet(),
-                FirstName = "Name" + i,
-                LastName = "Surname" + i,
-                Addres = "My Addres" + i,
-                Gender = "Male"
-            };
-        }
-
-        private long IncrementAndGet()
-        {
-            return Interlocked.Increment(ref count);
+            return _context.Person.Any(p => p.Id.Equals(id));
         }
     }
 }

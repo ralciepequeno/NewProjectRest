@@ -9,6 +9,6 @@ namespace NewProjectRestPrj.Model.Context
 
         }
         public MySQLContext(DbContextOptions<MySQLContext> options) : base (options) { }
-        public DbSet<Person> Pearson { get; set; }
+        public DbSet<Person> Person { get; set; }
     }
 }
