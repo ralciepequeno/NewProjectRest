@@ -25,8 +25,9 @@ namespace NewProjectRestPrj
         {
             var connection = Configuration["MySqlConnection:MySqlConnectionString"];
             services.AddDbContext<MySQLContext>(options => options.UseMySql(connection));
-
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            services.AddApiVersioning();
 
             //injeção de dependencia
             services.AddScoped<IPersonService, PersonServiceImp>();

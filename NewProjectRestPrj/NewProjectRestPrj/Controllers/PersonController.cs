@@ -5,8 +5,9 @@ using NewProjectRestPrj.Services;
 
 namespace NewProjectRestPrj.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
+    [ApiVersion("1")]
+    [Route("api/[controller]/v{version:apiVersion}")]    
     public class PersonController : ControllerBase
     {
 
