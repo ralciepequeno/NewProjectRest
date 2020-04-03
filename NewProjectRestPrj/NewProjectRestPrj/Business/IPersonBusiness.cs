@@ -1,9 +1,9 @@
 ﻿using NewProjectRestPrj.Model;
 using System.Collections.Generic;
 
-namespace NewProjectRestPrj.Services
+namespace NewProjectRestPrj.Business
 {
-    public interface IPersonService
+    public interface IPersonBusiness
     {
         Person Create(Person person);
         Person FindById(long Id);

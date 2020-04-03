@@ -3,15 +3,14 @@ using NewProjectRestPrj.Model.Context;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading;
 
-namespace NewProjectRestPrj.Services.Implementation
+namespace NewProjectRestPrj.Business.Implementation
 {
-    public class PersonServiceImp : IPersonService
+    public class PersonRepositoryImp : IPersonBusiness
     {
         private MySQLContext _context;
 
-        public PersonServiceImp(MySQLContext context)
+        public PersonRepositoryImp(MySQLContext context)
         {
             _context = context;
         }
