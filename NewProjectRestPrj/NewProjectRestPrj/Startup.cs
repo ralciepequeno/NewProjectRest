@@ -5,9 +5,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using NewProjectRestPrj.Model.Context;
-using NewProjectRestPrj.Services;
-using NewProjectRestPrj.Services.Implementation;
-
+using NewProjectRestPrj.Business;
+using NewProjectRestPrj.Business.Implementation;
 
 namespace NewProjectRestPrj
 {
@@ -30,7 +29,9 @@ namespace NewProjectRestPrj
             services.AddApiVersioning();
 
             //injeção de dependencia
-            services.AddScoped<IPersonService, PersonServiceImp>();
+            services.AddScoped<IPersonBusiness, PersonBusinessImp>();
+            //services.AddScoped<IPersonRepository, PersonRepositoryImp>();
+            services.AddScoped(typeof(IPersonRepository), typeof(PersonRepositoryImp));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

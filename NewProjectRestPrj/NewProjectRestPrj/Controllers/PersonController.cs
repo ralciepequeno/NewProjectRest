@@ -1,19 +1,24 @@
 ﻿using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using NewProjectRestPrj.Model;
-using NewProjectRestPrj.Services;
+using NewProjectRestPrj.Business;
 
 namespace NewProjectRestPrj.Controllers
 {
+    //[ApiController]
+    //[ApiVersion("1")]
+    //[Route("api/[controller]/v{version:apiVersion}")]
+
+    //[Route("api/[controller]/v{version:apiVersion}")]
+    [Route("api/v{version:apiVersion}/[controller]")]
     [ApiController]
     [ApiVersion("1")]
-    [Route("api/[controller]/v{version:apiVersion}")]    
     public class PersonController : ControllerBase
     {
 
-        private IPersonService _personService;
+        private IPersonBusiness _personService;
 
-        public PersonController(IPersonService personService)
+        public PersonController(IPersonBusiness personService)
         {
             _personService = personService;
         }

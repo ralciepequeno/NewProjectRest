@@ -1,17 +1,18 @@
-﻿using NewProjectRestPrj.Model;
+﻿using NewProjectRestPrj.Business;
+using NewProjectRestPrj.Model;
 using NewProjectRestPrj.Model.Context;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 
-namespace NewProjectRestPrj.Services.Implementation
+namespace NewProjectRestPrj.Business.Implementation
 {
-    public class PersonServiceImp : IPersonService
+    public class PersonRepositoryImp : IPersonRepository
     {
         private MySQLContext _context;
 
-        public PersonServiceImp(MySQLContext context)
+        public PersonRepositoryImp(MySQLContext context)
         {
             _context = context;
         }
@@ -62,7 +63,7 @@ namespace NewProjectRestPrj.Services.Implementation
         //metodo responsavel por atualizar os dados de uma pessoa
         public Person Update(Person person)
         {
-            if (!Exist(person.Id)) return new Person();
+            if (!Exists(person.Id)) return new Person();
 
             var result = _context.Person.SingleOrDefault(p => p.Id.Equals(person.Id));
             try
@@ -77,9 +78,10 @@ namespace NewProjectRestPrj.Services.Implementation
             return person;
         }
 
-        private bool Exist(long? id)
+        public bool Exists(long? id)
         {
             return _context.Person.Any(p => p.Id.Equals(id));
+            //throw new NotImplementedException();
         }
     }
 }
