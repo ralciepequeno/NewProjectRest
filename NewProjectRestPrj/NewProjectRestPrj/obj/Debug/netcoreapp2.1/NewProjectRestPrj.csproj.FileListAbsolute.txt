@@ -34,3 +34,22 @@ D:\Projetos\Loja\NewProjectRest\NewProjectRestPrj - SegundaVersaoSemCamada - tes
 D:\Projetos\Loja\NewProjectRest\NewProjectRestPrj - SegundaVersaoSemCamada - teste\NewProjectRestPrj\obj\Debug\netcoreapp2.1\NewProjectRestPrj.dll
 D:\Projetos\Loja\NewProjectRest\NewProjectRestPrj - SegundaVersaoSemCamada - teste\NewProjectRestPrj\obj\Debug\netcoreapp2.1\NewProjectRestPrj.pdb
 D:\Projetos\Loja\NewProjectRest\NewProjectRestPrj - SegundaVersaoSemCamada - teste\NewProjectRestPrj\obj\Debug\netcoreapp2.1\NewProjectRestPrj.genruntimeconfig.cache
+D:\Projetos\Loja\NewProjectRest\NewProjectRest\NewProjectRestPrj\NewProjectRestPrj\bin\Debug\netcoreapp2.1\appsettings.Development.json
+D:\Projetos\Loja\NewProjectRest\NewProjectRest\NewProjectRestPrj\NewProjectRestPrj\bin\Debug\netcoreapp2.1\appsettings.json
+D:\Projetos\Loja\NewProjectRest\NewProjectRest\NewProjectRestPrj\NewProjectRestPrj\bin\Debug\netcoreapp2.1\Properties\launchSettings.json
+D:\Projetos\Loja\NewProjectRest\NewProjectRest\NewProjectRestPrj\NewProjectRestPrj\bin\Debug\netcoreapp2.1\NewProjectRestPrj.deps.json
+D:\Projetos\Loja\NewProjectRest\NewProjectRest\NewProjectRestPrj\NewProjectRestPrj\bin\Debug\netcoreapp2.1\NewProjectRestPrj.runtimeconfig.json
+D:\Projetos\Loja\NewProjectRest\NewProjectRest\NewProjectRestPrj\NewProjectRestPrj\bin\Debug\netcoreapp2.1\NewProjectRestPrj.runtimeconfig.dev.json
+D:\Projetos\Loja\NewProjectRest\NewProjectRest\NewProjectRestPrj\NewProjectRestPrj\bin\Debug\netcoreapp2.1\NewProjectRestPrj.dll
+D:\Projetos\Loja\NewProjectRest\NewProjectRest\NewProjectRestPrj\NewProjectRestPrj\bin\Debug\netcoreapp2.1\NewProjectRestPrj.pdb
+D:\Projetos\Loja\NewProjectRest\NewProjectRest\NewProjectRestPrj\NewProjectRestPrj\obj\Debug\netcoreapp2.1\NewProjectRestPrj.csprojAssemblyReference.cache
+D:\Projetos\Loja\NewProjectRest\NewProjectRest\NewProjectRestPrj\NewProjectRestPrj\obj\Debug\netcoreapp2.1\NewProjectRestPrj.RazorAssemblyInfo.cache
+D:\Projetos\Loja\NewProjectRest\NewProjectRest\NewProjectRestPrj\NewProjectRestPrj\obj\Debug\netcoreapp2.1\NewProjectRestPrj.RazorAssemblyInfo.cs
+D:\Projetos\Loja\NewProjectRest\NewProjectRest\NewProjectRestPrj\NewProjectRestPrj\obj\Debug\netcoreapp2.1\NewProjectRestPrj.AssemblyInfoInputs.cache
+D:\Projetos\Loja\NewProjectRest\NewProjectRest\NewProjectRestPrj\NewProjectRestPrj\obj\Debug\netcoreapp2.1\NewProjectRestPrj.AssemblyInfo.cs
+D:\Projetos\Loja\NewProjectRest\NewProjectRest\NewProjectRestPrj\NewProjectRestPrj\obj\Debug\netcoreapp2.1\NewProjectRestPrj.RazorTargetAssemblyInfo.cache
+D:\Projetos\Loja\NewProjectRest\NewProjectRest\NewProjectRestPrj\NewProjectRestPrj\obj\Debug\netcoreapp2.1\NewProjectRestPrj.dll
+D:\Projetos\Loja\NewProjectRest\NewProjectRest\NewProjectRestPrj\NewProjectRestPrj\obj\Debug\netcoreapp2.1\NewProjectRestPrj.pdb
+D:\Projetos\Loja\NewProjectRest\NewProjectRest\NewProjectRestPrj\NewProjectRestPrj\obj\Debug\netcoreapp2.1\NewProjectRestPrj.genruntimeconfig.cache
+D:\Projetos\Loja\NewProjectRest\NewProjectRest\NewProjectRestPrj\NewProjectRestPrj\obj\Debug\netcoreapp2.1\NewProjectRestPrj.csproj.CoreCompileInputs.cache
+D:\Projetos\Loja\NewProjectRest\NewProjectRest\NewProjectRestPrj\NewProjectRestPrj\bin\Debug\netcoreapp2.1\Evolve.json
