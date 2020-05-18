@@ -10,6 +10,7 @@ using NewProjectRestPrj.Business.Implementation;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
+using NewProjectRestPrj.Repository.Generic;
 
 namespace NewProjectRestPrj
 {
@@ -59,8 +60,10 @@ namespace NewProjectRestPrj
 
             //injeção de dependencia
             services.AddScoped<IPersonBusiness, PersonBusinessImp>();
+            services.AddScoped<IBookBusiness, BookBusinessImp>();
             //services.AddScoped<IPersonRepository, PersonRepositoryImp>();
-            services.AddScoped(typeof(IPersonRepository), typeof(PersonRepositoryImp));
+            services.AddScoped(typeof(IBookRepository), typeof(PersonRepositoryImp));
+            services.AddScoped(typeof(IRepository<>), typeof(GenericRepository<>));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

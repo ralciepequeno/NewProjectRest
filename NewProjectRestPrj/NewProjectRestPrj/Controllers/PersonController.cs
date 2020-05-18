@@ -2,13 +2,14 @@
 using Microsoft.AspNetCore.Mvc;
 using NewProjectRestPrj.Model;
 using NewProjectRestPrj.Business;
+using NewProjectRestPrj.Data.VO;
 
 namespace NewProjectRestPrj.Controllers
 {
     [ApiController]
     [ApiVersion("1")]
     [Route("api/[controller]/v{version:apiVersion}")]
-    public class PersonController : ControllerBase
+    public class PersonController : Controller
     {
 
         private IPersonBusiness _personBusiness;
@@ -35,7 +36,7 @@ namespace NewProjectRestPrj.Controllers
 
         // POST api/values
         [HttpPost]
-        public IActionResult Post([FromBody] Person person)
+        public IActionResult Post([FromBody] PersonVO person)
         {
             if (person == null) return BadRequest();
             return new ObjectResult(_personBusiness.Create(person));
@@ -43,7 +44,7 @@ namespace NewProjectRestPrj.Controllers
 
         // PUT api/values/5
         [HttpPut("{id}")]
-        public IActionResult Put([FromBody] Person person)
+        public IActionResult Put([FromBody] PersonVO person)
         {
             if (person == null) return BadRequest();
             var updatedPerson = _personBusiness.Update(person);

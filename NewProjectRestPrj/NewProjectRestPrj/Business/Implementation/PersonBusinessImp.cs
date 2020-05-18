@@ -1,52 +1,54 @@
-﻿using NewProjectRestPrj.Model;
+﻿using NewProjectRestPrj.Data.Converters;
+using NewProjectRestPrj.Data.VO;
+using NewProjectRestPrj.Model;
+using NewProjectRestPrj.Repository.Generic;
 using System.Collections.Generic;
 
 namespace NewProjectRestPrj.Business.Implementation
 {
     public class PersonBusinessImp : IPersonBusiness
     {
-        private IPersonRepository _repository;
+        private IRepository<Person> _repository;
+        private readonly PersonConverter _converter;
 
-        public PersonBusinessImp(IPersonRepository repository)
+        public PersonBusinessImp(IRepository<Person> repository)
         {
             _repository = repository;
+            _converter = new PersonConverter();
         }
 
-        //metodo responsavel por criar uma pessoa 
-        public Person Create(Person person)
+        public PersonVO Create(PersonVO person)
         {
-            return _repository.Create(person);
-            //return person;
+            var personEntity = _converter.Parse(person);
+            personEntity = _repository.Create(personEntity);
+            return _converter.Parse(personEntity);
         }
 
-        //metodo responsavel por retornar uma pessoa
+        public PersonVO FindById(long id)
+        {
+            return _converter.Parse(_repository.FindById(id));
+        }
+
+        public List<PersonVO> FindAll()
+        {
+            return _converter.ParseList(_repository.FindAll());
+        }
+
+        public PersonVO Update(PersonVO person)
+        {
+            var personEntity = _converter.Parse(person);
+            personEntity = _repository.Update(personEntity);
+            return _converter.Parse(personEntity);
+        }
+
         public void Delete(long id)
         {
             _repository.Delete(id);
-            //return person;
         }
 
-        //metodo responsavel por retornar todas as pessoas
-        public List<Person> FindAll()
+        public bool Exists(long id)
         {
-            return _repository.FindAll();
-            //return _repository.FindAll();
-        }
-               
-        //metodo responsavel por retornar uma pessoa
-        public Person FindById(long id)
-        {
-            //return _repository.FindById(id);
-            return _repository.FindById(id);
-            //return person;
-            //return _context.Person.SingleOrDefault(p => p.Id.Equals(Id));
-        }
-
-        //metodo responsavel por atualizar os dados de uma pessoa
-        public Person Update(Person person)
-        {
-            return _repository.Update(person);
-            //return person;
+           return _repository.Exists(id);
         }
     }
 }

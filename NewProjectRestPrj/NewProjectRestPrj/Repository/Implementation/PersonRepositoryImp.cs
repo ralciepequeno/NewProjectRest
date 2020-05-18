@@ -38,7 +38,7 @@ namespace NewProjectRestPrj.Business.Implementation
             var result = _context.Person.SingleOrDefault(p => p.Id.Equals(Id));
             try
             {
-                if (result == null) _context.Person.Remove(result);
+                if (result != null) _context.Person.Remove(result);
                 _context.SaveChanges();
             }
             catch (Exception ex)
@@ -75,13 +75,12 @@ namespace NewProjectRestPrj.Business.Implementation
             {
                 throw ex;
             }
-            return person;
+            return result;
         }
 
         public bool Exists(long? id)
         {
             return _context.Person.Any(p => p.Id.Equals(id));
-            //throw new NotImplementedException();
         }
     }
 }
